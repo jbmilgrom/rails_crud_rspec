@@ -40,4 +40,5 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 gem 'rspec-rails', group: [:development, :test]
 gem 'pry-rails', group: [:development, :test]
+gem 'shoulda-matchers', group: [:development, :test], require: false
 
