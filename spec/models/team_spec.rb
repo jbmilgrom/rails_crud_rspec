@@ -7,16 +7,26 @@ RSpec.describe Team, :type => :model do
   		{name: "Spurs", city: "San Antonio"},
   		{name: "Knicks", city: "New York"}
   	]
-    team_array.each_with_index do |team, index|
-    	@team_array[index] = assign(:team, Team.create!(
+
+  	# why use this rspec 'assign' method instead of just Team.create!?  
+  	# Does .create! not save to the database?
+    @team_array.each_with_index do |team, index|
+    	@team_array[index] = Team.new(
       	:name => team[:name],
       	:city => team[:city]
-    	))
+    	)
     end
-    #TEST THIS !!!!!!!
+
   end
-  it { should have_many(:players) }
-  it { should have_many(:contracts) }
+
+  describe Team do 
+  	binding.pry
+  	it { should have_many(:players) }
+  end
+
+  describe Team do 
+	it { should have_many(:contracts) }
+  end
 
   it "should have the same Contract for a given Player as the Player has Contracts for a given Team" do
     
