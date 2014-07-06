@@ -1,4 +1,4 @@
 class Player < ActiveRecord::Base
-	has_many :teams, through: :memberships
-	has_many :memberships
+	has_many :teams, through: :contracts
+	has_many :contracts
 end
