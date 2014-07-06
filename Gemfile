@@ -39,5 +39,5 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # gem 'debugger', group: [:development, :test]
 
 gem 'rspec-rails', group: [:development, :test]
-gem 'rails-pry', group: [:development, :test]
+gem 'pry-rails', group: [:development, :test]
 
