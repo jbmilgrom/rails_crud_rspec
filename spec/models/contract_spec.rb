@@ -6,4 +6,6 @@ RSpec.describe Contract, :type => :model do
 	
 	it {should belong_to(:team)}
 
+	
+
 end
