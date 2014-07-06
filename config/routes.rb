@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
 
+  root 'teams#index'
+  
   resources :teams do 
-    resources :memberships, shallow: true
+    resources :contracts, shallow: true
   end
+
+  resources :players
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
